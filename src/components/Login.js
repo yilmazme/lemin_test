@@ -28,7 +28,7 @@ function Login() {
     if (!user.password || !user.username) {
       setUser({ ...user, errorMessage: "please fill required fields" });
     } else {
-      if (user.username !== "lemin" || user.password !== "Lemin123") {
+      if (user.username !== process.env.REACT_APP_USER || user.password !== process.env.REACT_APP_PASSWORD) {
         setUser({ ...user, errorMessage: "username or password is incorrect!"});
       } else { 
         getCaptchaValue()
