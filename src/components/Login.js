@@ -28,7 +28,7 @@ function Login() {
     if (!user.password || !user.username) {
       setUser({ ...user, errorMessage: "please fill required fields" });
     } else {
-      if (user.username !== "user" || user.password !== "user12345") {
+      if (user.username !== "lemin" || user.password !== "Lemin123") {
         setUser({ ...user, errorMessage: "username or password is incorrect!"});
       } else { 
         getCaptchaValue()
